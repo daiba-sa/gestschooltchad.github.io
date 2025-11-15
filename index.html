@@ -1,62 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>GestSchool Tchad – Gestion des écoles</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { margin:0; font-family:Arial, sans-serif; background:#f4f7fb; color:#333; }
-        header { background:#003a75; color:white; padding:20px; text-align:center; }
-        header img { width:110px; margin-bottom:10px; }
-        nav { background:#0056a3; text-align:center; padding:12px; }
-        nav a { color:white; margin:15px; text-decoration:none; font-weight:bold; }
-        section { padding:40px; max-width:900px; margin:auto; }
-        h2 { color:#003a75; }
-        .box { background:white; padding:25px; box-shadow:0 2px 5px rgba(0,0,0,0.1); border-radius:10px; }
-        footer { text-align:center; padding:18px; background:#003a75; color:white; margin-top:50px; }
-        .btn { background:#003a75; color:white; padding:12px 20px; text-decoration:none; border-radius:5px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GestSchool Tchad - Accueil</title>
+<link rel="stylesheet" href="style.css">
+<!-- AOS pour animations -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <img src="gestschooltchad.png" alt="Logo GestSchool Tchad">
-    <h1>GestSchool Tchad</h1>
-    <p>Le logiciel moderne et professionnel pour la gestion des établissements scolaires au Tchad</p>
-</header>
-
-<nav>
-    <a href="index.html">Accueil</a>
+<header class="header">
+  <div class="logo-container">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
+    <span class="logo-text">GestSchool Tchad</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html" class="active">Accueil</a>
     <a href="about.html">À propos</a>
     <a href="download.html">Téléchargement</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
+</header>
 
-<section>
-    <div class="box">
-        <h2>Bienvenue</h2>
-        <p>
-            GestSchool Tchad simplifie la gestion scolaire : élèves, enseignants, classes,
-            notes, bulletins, cartes scolaires, archivages, année scolaire, tout est automatisé.
-        </p>
+<section class="hero" data-aos="fade-up">
+  <div class="hero-text">
+    <h1>La solution moderne pour gérer votre établissement</h1>
+    <p>GestSchool Tchad facilite la gestion des élèves, enseignants, notes, cartes scolaires et statistiques.</p>
+    <a href="download.html" class="cta-btn" data-aos="fade-right" data-aos-delay="200">Télécharger maintenant</a>
+  </div>
+  <div class="hero-image" data-aos="fade-left">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad logiciel">
+  </div>
+</section>
 
-        <h2>Fonctionnalités principales</h2>
-        <ul>
-            <li>📘 Gestion des élèves et enseignants</li>
-            <li>📊 Calcul automatique des moyennes et bulletins</li>
-            <li>🪪 Cartes scolaires avec photo + QR Code</li>
-            <li>🗃️ Base DuckDB ou SQLite</li>
-            <li>🖨️ Impression rapide (cartes + bulletins)</li>
-        </ul>
-
-        <br>
-        <a class="btn" href="download.html">Télécharger maintenant</a>
+<section class="features" id="features">
+  <h2 data-aos="fade-up">Fonctionnalités principales</h2>
+  <div class="feature-cards">
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Gestion des élèves</h3>
+      <p>Inscription, édition, génération automatique de cartes scolaires.</p>
     </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Gestion des notes</h3>
+      <p>Calcul automatique des moyennes et bulletins annuels.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Gestion des enseignants</h3>
+      <p>Enregistrement, suivi et mise à jour des informations du personnel.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+      <h3>Statistiques et rapports</h3>
+      <p>Visualisation graphique des performances scolaires.</p>
+    </div>
+  </div>
+</section>
+
+<section class="advantages" data-aos="fade-up">
+  <h2>Pourquoi choisir GestSchool Tchad ?</h2>
+  <div class="adv-cards">
+    <div class="adv-card" data-aos="fade-right" data-aos-delay="100">
+      <h3>🇹🇩 Adapté au Tchad</h3>
+      <p>Logiciel conçu pour les besoins spécifiques des établissements tchadiens.</p>
+    </div>
+    <div class="adv-card" data-aos="fade-right" data-aos-delay="200">
+      <h3>⚡ Rapide et simple</h3>
+      <p>Interface intuitive et traitement instantané.</p>
+    </div>
+    <div class="adv-card" data-aos="fade-right" data-aos-delay="300">
+      <h3>💾 Sauvegarde sécurisée</h3>
+      <p>Base de données fiable et portable.</p>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2025 – GestSchool Tchad. Tous droits réservés.
+  <div class="footer-content">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
+    <p>© 2025 GestSchool Tchad — Développé au Tchad</p>
+  </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
 
 </body>
 </html>
