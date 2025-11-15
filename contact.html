@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact – GestSchool Tchad</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { margin:0; font-family:Arial, sans-serif; background:#f4f7fb; color:#333; }
-        header { background:#003a75; color:white; padding:20px; text-align:center; }
-        nav { background:#0056a3; text-align:center; padding:12px; }
-        nav a { color:white; margin:15px; text-decoration:none; font-weight:bold; }
-        section { padding:40px; max-width:900px; margin:auto; }
-        h2 { color:#003a75; }
-        .box { background:white; padding:25px; box-shadow:0 2px 5px rgba(0,0,0,0.1); border-radius:10px; }
-        footer { text-align:center; padding:18px; background:#003a75; color:white; margin-top:50px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - GestSchool Tchad</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-    <h1>Contact</h1>
-</header>
-
-<nav>
+<header class="header">
+  <div class="logo-container">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
+    <span class="logo-text">GestSchool Tchad</span>
+  </div>
+  <nav class="nav">
     <a href="index.html">Accueil</a>
     <a href="about.html">À propos</a>
     <a href="download.html">Téléchargement</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
 
-<section>
-    <div class="box">
-        <h2>Contactez-nous</h2>
-        <p><strong>Développeur :</strong> SAHOULBA DAIBA</p>
-        <p><strong>Email :</strong> daibasahoulba@gmail.com</p>
-        <p><strong>Téléphone :</strong> +235 68 86 03 18 / 96 46 68 90</p>
+<section class="hero" data-aos="fade-up">
+  <h1>Contactez-nous</h1>
+  <p>Pour tout support ou question, contactez-nous via WhatsApp ou email.</p>
+</section>
 
-        <h2>Réseaux sociaux</h2>
-        <p>
-            <a href="#" target="_blank">Facebook</a><br>
-            <a href="#" target="_blank">WhatsApp</a>
-        </p>
+<section class="contacts" data-aos="fade-up">
+  <div class="feature-cards">
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
+      <h3>WhatsApp Direct</h3>
+      <a href="https://wa.me/23568860318" class="contact-btn">Écrire sur WhatsApp</a>
     </div>
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="200">
+      <h3>Email</h3>
+      <a href="mailto:contact@gestschooltchad.com" class="contact-btn">Envoyer un Email</a>
+    </div>
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="300">
+      <h3>Envoyer un message</h3>
+      <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2025 – GestSchool Tchad. Tous droits réservés.
+  <div class="footer-content">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
+    <p>© 2025 GestSchool Tchad — Contact officiel</p>
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 </body>
 </html>
