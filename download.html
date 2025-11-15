@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Téléchargement – GestSchool Tchad</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { margin:0; font-family:Arial, sans-serif; background:#f4f7fb; color:#333; }
-        header { background:#003a75; color:white; padding:20px; text-align:center; }
-        nav { background:#0056a3; text-align:center; padding:12px; }
-        nav a { color:white; margin:15px; text-decoration:none; font-weight:bold; }
-        section { padding:40px; max-width:900px; margin:auto; }
-        h2 { color:#003a75; }
-        .box { background:white; padding:25px; box-shadow:0 2px 5px rgba(0,0,0,0.1); border-radius:10px; }
-        .btn { background:#003a75; color:white; padding:12px 20px; text-decoration:none; border-radius:5px; }
-        footer { text-align:center; padding:18px; background:#003a75; color:white; margin-top:50px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Téléchargement - GestSchool Tchad</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-    <h1>Téléchargement</h1>
-</header>
-
-<nav>
+<header class="header">
+  <div class="logo-container">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
+    <span class="logo-text">GestSchool Tchad</span>
+  </div>
+  <nav class="nav">
     <a href="index.html">Accueil</a>
     <a href="about.html">À propos</a>
-    <a href="download.html">Téléchargement</a>
+    <a href="download.html" class="active">Téléchargement</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
+</header>
 
-<section>
-    <div class="box">
-        <h2>Télécharger GestSchool Tchad</h2>
-        <p>
-            Cliquez ci-dessous pour télécharger la dernière version du logiciel.
-        </p>
-        <a class="btn" href="https://github.com/TON_NOM/GestSchool-Tchad/releases" target="_blank">
-            Télécharger GestSchool Tchad
-        </a>
+<section class="hero" data-aos="fade-up">
+  <h1>Téléchargez GestSchool Tchad</h1>
+  <p>Choisissez les fichiers nécessaires pour votre établissement : logiciel, base de données et guide utilisateur.</p>
+</section>
 
-        <h2>Installation</h2>
-        <ul>
-            <li>Compatible Windows 7, 8, 10, 11</li>
-            <li>Installation en un seul clic</li>
-            <li>Aucune connexion Internet requise pour l’utilisation</li>
-        </ul>
+<section class="downloads" data-aos="fade-up">
+  <div class="feature-cards">
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
+      <h3>Version Windows</h3>
+      <p>Compatible Windows 7 / 8 / 10 / 11.</p>
+      <a href="#" class="download-btn">Télécharger Windows</a>
     </div>
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="200">
+      <h3>Base de données DuckDB</h3>
+      <p>Base vierge ou mise à jour pour l'installation.</p>
+      <a href="#" class="download-btn">Télécharger base ecole.duckdb</a>
+    </div>
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="300">
+      <h3>Guide PDF</h3>
+      <p>Documentation complète pour l'installation et l'utilisation.</p>
+      <a href="#" class="download-btn">Télécharger PDF</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2025 – GestSchool Tchad. Tous droits réservés.
+  <div class="footer-content">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
+    <p>© 2025 GestSchool Tchad — Téléchargement officiel</p>
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 </body>
 </html>
