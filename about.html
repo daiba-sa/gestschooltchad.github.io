@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- Header -->
 <header class="header">
   <div class="logo-container">
     <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
@@ -20,13 +21,24 @@
     <a href="download.html">Téléchargement</a>
     <a href="contact.html">Contact</a>
   </nav>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero" data-aos="fade-up">
   <h1>À propos de GestSchool Tchad</h1>
   <p>GestSchool Tchad est une solution complète pour moderniser la gestion scolaire au Tchad. Il permet de gérer élèves, enseignants, notes, bulletins, cartes scolaires et statistiques avec simplicité et efficacité.</p>
 </section>
 
+<!-- Contexte et Justification -->
+<section class="context" data-aos="fade-up">
+  <h2>Contexte et justification</h2>
+  <p>Au Tchad, de nombreux établissements rencontrent des difficultés dans la gestion des élèves, du personnel et des notes. GestSchool Tchad a été conçu pour répondre à ce besoin, en offrant un logiciel moderne, facile à utiliser et adapté aux réalités locales.</p>
+</section>
+
+<!-- Nos avantages -->
 <section class="features" data-aos="fade-up">
   <h2>Nos avantages</h2>
   <div class="feature-cards">
@@ -45,11 +57,50 @@
   </div>
 </section>
 
-<section class="mission" data-aos="fade-up">
-  <h2>Notre vision et mission</h2>
-  <p>Améliorer la gestion scolaire au Tchad grâce à un logiciel simple, efficace et accessible à tous les établissements, permettant aux enseignants et aux administrateurs de gagner du temps et de travailler plus efficacement.</p>
+<!-- Commentaires des utilisateurs -->
+<section class="testimonials" data-aos="fade-up">
+  <h2>Ce que disent nos utilisateurs</h2>
+  <div class="testimonial-slider">
+    <div>
+      <p>"Grâce à GestSchool Tchad, nous gérons notre lycée plus efficacement et gagnons beaucoup de temps."</p>
+      <span>- Directeur lycée XYZ</span>
+    </div>
+    <div>
+      <p>"Le logiciel est intuitif, rapide et adapté à nos besoins spécifiques."</p>
+      <span>- Enseignant lycée ABC</span>
+    </div>
+    <div>
+      <p>"La génération des bulletins et cartes scolaires est devenue simple et fiable."</p>
+      <span>- Administrateur école DEF</span>
+    </div>
+  </div>
 </section>
 
+<!-- Mission et Vision -->
+<section class="mission" data-aos="fade-up">
+  <h2>Notre vision et mission</h2>
+  <p>Améliorer la gestion scolaire au Tchad grâce à un logiciel simple, efficace et accessible à tous les établissements. Permettre aux enseignants et aux administrateurs de gagner du temps et de travailler plus efficacement.</p>
+</section>
+
+<!-- Développeur / Équipe -->
+<section class="developer" data-aos="fade-up">
+  <h2>Développeur et équipe</h2>
+  <div class="developer-cards">
+    <div class="developer-card" data-aos="fade-right" data-aos-delay="100">
+      <h3>SAHOULBA DAIBA</h3>
+      <p>Développeur principal et concepteur de GestSchool Tchad. Passionné par l’innovation et la gestion scolaire.</p>
+    </div>
+    <!-- Tu peux ajouter d'autres membres ici si nécessaire -->
+  </div>
+</section>
+
+<!-- Call to Action final -->
+<section class="cta-final" data-aos="fade-up">
+  <h2>Prêt à moderniser votre établissement ?</h2>
+  <a href="download.html" class="cta-btn">Télécharger GestSchool Tchad</a>
+</section>
+
+<!-- Footer -->
 <footer>
   <div class="footer-content">
     <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
@@ -57,9 +108,30 @@
   </div>
 </footer>
 
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
   AOS.init({ duration: 1000, once: true });
+
+  // Slider témoignages
+  $('.testimonial-slider').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 4000
+  });
+
+  // Menu hamburger mobile
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('.nav');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    hamburger.classList.toggle('toggle');
+  });
 </script>
+
 </body>
 </html>
