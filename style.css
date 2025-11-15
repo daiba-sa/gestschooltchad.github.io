@@ -1,4 +1,6 @@
-/* Couleurs et variables */
+/* =====================
+   Variables de couleurs
+===================== */
 :root {
   --primary: #0a3d62;
   --secondary: #1e90ff;
@@ -7,7 +9,9 @@
   --cta-hover: #187bcd;
 }
 
-/* Reset et base */
+/* =====================
+   Reset de base
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -21,12 +25,14 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* =====================
+   Header
+===================== */
 header.header {
   background: var(--primary);
   color: white;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   position: sticky;
@@ -51,11 +57,8 @@ header.header {
 }
 
 .nav {
-  margin-top: 10px;
   display: flex;
   gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .nav a {
@@ -72,13 +75,52 @@ header.header {
   background-color: var(--secondary);
 }
 
-/* Hero Section */
+/* Hamburger mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+.hamburger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px,-5px);
+}
+
+.nav.nav-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: var(--primary);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* =====================
+   Hero Section
+===================== */
 .hero {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(to bottom, #ffffff, #e8f0ff);
 }
 
@@ -115,7 +157,9 @@ header.header {
   transform: translateY(-2px);
 }
 
-/* Features Section */
+/* =====================
+   Features Section
+===================== */
 .features {
   padding: 60px 20px;
   max-width: 1200px;
@@ -140,11 +184,12 @@ header.header {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .feature-card h3 {
@@ -152,7 +197,9 @@ header.header {
   margin-bottom: 10px;
 }
 
-/* Advantages Section */
+/* =====================
+   Advantages Section
+===================== */
 .advantages {
   background: #e8f0ff;
   padding: 60px 20px;
@@ -176,11 +223,12 @@ header.header {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .adv-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .adv-card h3 {
@@ -188,13 +236,73 @@ header.header {
   margin-bottom: 10px;
 }
 
-/* Footer */
+/* =====================
+   Screenshots Slider
+===================== */
+.screenshots {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.screenshots h2 {
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.screenshot-slider img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* =====================
+   Testimonials
+===================== */
+.testimonials {
+  background: #f0f4f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.testimonial-slider div {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin: 0 10px;
+}
+
+.testimonial-slider p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* =====================
+   Call to Action final
+===================== */
+.cta-final {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-final h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+/* =====================
+   Footer
+===================== */
 footer {
   background: var(--primary);
   color: white;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 50px;
 }
 
 footer .footer-logo {
@@ -202,7 +310,9 @@ footer .footer-logo {
   margin-bottom: 10px;
 }
 
-/* Responsive */
+/* =====================
+   Responsive
+===================== */
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
@@ -216,5 +326,23 @@ footer .footer-logo {
 
   .hero-image {
     max-width: 45%;
+  }
+
+  .nav.nav-active {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
   }
 }
