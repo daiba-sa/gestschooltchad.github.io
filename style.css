@@ -1,0 +1,220 @@
+/* Couleurs et variables */
+:root {
+  --primary: #0a3d62;
+  --secondary: #1e90ff;
+  --bg: #f5f8fc;
+  --text: #2c3e50;
+  --cta-hover: #187bcd;
+}
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+header.header {
+  background: var(--primary);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav {
+  margin-top: 10px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: var(--secondary);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffffff, #e8f0ff);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.hero-image img {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: var(--secondary);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--cta-hover);
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+.features {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.features h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Advantages Section */
+.advantages {
+  background: #e8f0ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.advantages h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.adv-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.adv-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.adv-card:hover {
+  transform: translateY(-5px);
+}
+
+.adv-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+footer .footer-logo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-image {
+    max-width: 45%;
+  }
+}
