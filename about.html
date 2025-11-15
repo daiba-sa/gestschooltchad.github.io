@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>À propos – GestSchool Tchad</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { margin:0; font-family:Arial, sans-serif; background:#f4f7fb; color:#333; }
-        header { background:#003a75; color:white; padding:20px; text-align:center; }
-        nav { background:#0056a3; text-align:center; padding:12px; }
-        nav a { color:white; margin:15px; text-decoration:none; font-weight:bold; }
-        section { padding:40px; max-width:900px; margin:auto; }
-        h2 { color:#003a75; }
-        .box { background:white; padding:25px; box-shadow:0 2px 5px rgba(0,0,0,0.1); border-radius:10px; }
-        footer { text-align:center; padding:18px; background:#003a75; color:white; margin-top:50px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos - GestSchool Tchad</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-    <h1>À propos de GestSchool Tchad</h1>
-</header>
-
-<nav>
+<header class="header">
+  <div class="logo-container">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
+    <span class="logo-text">GestSchool Tchad</span>
+  </div>
+  <nav class="nav">
     <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
+    <a href="about.html" class="active">À propos</a>
     <a href="download.html">Téléchargement</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
+</header>
 
-<section>
-    <div class="box">
-        <h2>Notre objectif</h2>
-        <p>
-            GestSchool Tchad est un logiciel conçu pour moderniser la gestion scolaire
-            dans les établissements secondaires au Tchad.
-        </p>
+<section class="hero" data-aos="fade-up">
+  <h1>À propos de GestSchool Tchad</h1>
+  <p>GestSchool Tchad est une solution complète pour moderniser la gestion scolaire au Tchad. Il permet de gérer élèves, enseignants, notes, bulletins, cartes scolaires et statistiques avec simplicité et efficacité.</p>
+</section>
 
-        <h2>Pourquoi ce logiciel ?</h2>
-        <p>
-            Les écoles ont besoin d’un outil simple, rapide et efficace pour :
-        </p>
-        <ul>
-            <li>Enregistrer élèves et professeurs</li>
-            <li>Générer automatiquement les bulletins</li>
-            <li>Imprimer les cartes scolaires professionnelles</li>
-            <li>Organiser les années scolaires</li>
-        </ul>
-
-        <h2>Développeur</h2>
-        <p><strong> ING DAIBA SAHOULBA</strong></p>
-        <p>Développeur d'applications et solutions numériques au Tchad.</p>
+<section class="features" data-aos="fade-up">
+  <h2>Nos avantages</h2>
+  <div class="feature-cards">
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
+      <h3>🇹🇩 Adapté au Tchad</h3>
+      <p>Le logiciel répond aux besoins spécifiques des établissements tchadiens.</p>
     </div>
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="200">
+      <h3>⚡ Interface rapide</h3>
+      <p>Navigation simple et traitement instantané pour toutes les fonctionnalités.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-right" data-aos-delay="300">
+      <h3>💾 Sécurité des données</h3>
+      <p>Base de données fiable, portable et protégée.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mission" data-aos="fade-up">
+  <h2>Notre vision et mission</h2>
+  <p>Améliorer la gestion scolaire au Tchad grâce à un logiciel simple, efficace et accessible à tous les établissements, permettant aux enseignants et aux administrateurs de gagner du temps et de travailler plus efficacement.</p>
 </section>
 
 <footer>
-    © 2025 – GestSchool Tchad. Tous droits réservés.
+  <div class="footer-content">
+    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
+    <p>© 2025 GestSchool Tchad — Développé au Tchad</p>
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 </body>
 </html>
