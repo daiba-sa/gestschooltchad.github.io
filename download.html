@@ -6,9 +6,78 @@
 <title>Téléchargement - GestSchool Tchad</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<style>
+  /* Styles spécifiques pour la page download */
+  .section-download, .section-form {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #e8f4ff;
+      text-align: center;
+  }
+
+  .section-download h2, .section-form h2 {
+      font-size: 28px;
+      color: #034f84;
+      margin-bottom: 20px;
+  }
+
+  .btn-download {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #0288d1;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      margin-top: 15px;
+      transition: 0.3s;
+  }
+
+  .btn-download:hover {
+      background-color: #026aa7;
+  }
+
+  form input, form textarea {
+      width: 90%;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+  }
+
+  form button {
+      padding: 12px 25px;
+      background-color: #034f84;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  form button:hover {
+      background-color: #022f54;
+  }
+
+  #confirmation {
+      color: green;
+      margin-top: 15px;
+      display: none;
+  }
+
+  @media(max-width:768px){
+      .section-download, .section-form {
+          width: 90%;
+          padding: 20px;
+      }
+  }
+</style>
 </head>
 <body>
-
 <header class="header">
   <div class="logo-container">
     <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
@@ -22,41 +91,62 @@
   </nav>
 </header>
 
-<section class="hero" data-aos="fade-up">
-  <h1>Téléchargez GestSchool Tchad</h1>
-  <p>Choisissez les fichiers nécessaires pour votre établissement : logiciel, base de données et guide utilisateur.</p>
+<!-- Section Téléchargement -->
+<section class="section-download" data-aos="fade-up">
+  <h2>Téléchargez GestSchool Tchad</h2>
+  <p>GestSchool Tchad est une solution complète pour la gestion scolaire des lycées et collèges tchadiens.</p>
+  <a href="GestSchoolTchad_setup.exe" class="btn-download" download>⬇ Télécharger l'application</a>
 </section>
 
-<section class="downloads" data-aos="fade-up">
-  <div class="feature-cards">
-    <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
-      <h3>Version Windows</h3>
-      <p>Compatible Windows 7 / 8 / 10 / 11.</p>
-      <a href="#" class="download-btn">Télécharger Windows</a>
-    </div>
-    <div class="feature-card" data-aos="fade-right" data-aos-delay="200">
-      <h3>Base de données DuckDB</h3>
-      <p>Base vierge ou mise à jour pour l'installation.</p>
-      <a href="#" class="download-btn">Télécharger base ecole.duckdb</a>
-    </div>
-    <div class="feature-card" data-aos="fade-right" data-aos-delay="300">
-      <h3>Guide PDF</h3>
-      <p>Documentation complète pour l'installation et l'utilisation.</p>
-      <a href="#" class="download-btn">Télécharger PDF</a>
-    </div>
-  </div>
+<!-- Section Demande d'accès -->
+<section class="section-form" data-aos="fade-up">
+  <h2>Demandez l'accès à GestSchool Tchad</h2>
+  <p>Remplissez vos coordonnées et nous vous contacterons rapidement.</p>
+
+  <!-- Formulaire Formspree -->
+  <form id="demandeForm" action="https://formspree.io/f/TON_CODE_FORM" method="POST">
+    <input type="text" name="nom" placeholder="Nom complet" required>
+    <input type="email" name="email" placeholder="Adresse Email" required>
+    <input type="text" name="whatsapp" placeholder="Numéro WhatsApp">
+    <textarea name="message" placeholder="Message ou établissement" rows="4"></textarea>
+    <button type="submit">Envoyer ma demande</button>
+  </form>
+  <p id="confirmation">Merci ! Votre demande a été envoyée.</p>
 </section>
 
 <footer>
   <div class="footer-content">
     <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
-    <p>© 2025 GestSchool Tchad — Téléchargement officiel</p>
+    <p>© 2025 GestSchool Tchad — Développé au Tchad</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
   AOS.init({ duration: 1000, once: true });
+
+  // Confirmation après soumission Formspree
+  const form = document.getElementById('demandeForm');
+  const confirmation = document.getElementById('confirmation');
+
+  form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+      }).then(response => {
+          if(response.ok){
+              confirmation.style.display = 'block';
+              form.reset();
+          } else {
+              alert("Erreur lors de l'envoi. Veuillez réessayer.");
+          }
+      }).catch(error => {
+          alert("Erreur lors de l'envoi. Veuillez réessayer.");
+      });
+  });
 </script>
 </body>
 </html>
