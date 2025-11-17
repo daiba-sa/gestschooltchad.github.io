@@ -1,194 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta name="description" content="GestSchool Tchad est une application moderne pour la gestion des tâches administratives des établissements secondaires, adaptée au contexte éducatif tchadien. Développée par le jeune ingénieur DAIBA SAHOULBA, passionné par la numérisation de l’éducation nationale au Tchad.">
-
-<meta name="google-site-verification" content="lIct8k5qCHDFnVzemib12l8OjlQZVaroa348yRL_VDI" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GestSchool Tchad - Accueil</title>
+<title>GestSchool Tchad - Gestion scolaire moderne</title>
+
+<!-- Meta SEO -->
+<meta name="description" content="GestSchool Tchad, une application moderne développée par DAIBA SAHOULBA pour gérer efficacement les établissements secondaires au Tchad : élèves, enseignants, notes, bulletins, cartes scolaires et plus.">
+
 <link rel="stylesheet" href="style.css">
 
-<!-- AOS pour animations -->
+<!-- Animation AOS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-<!-- Slick Slider pour screenshots et témoignages -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
 
-<!-- Header -->
+<!-- ======================================================
+     HEADER
+====================================================== -->
 <header class="header">
-  <div class="logo-container">
-    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
-    <span class="logo-text">GestSchool Tchad</span>
-  </div>
-  <nav class="nav">
-    <a href="index.html" class="active">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="download.html">Téléchargement</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
+  <div class="navbar">
+
+    <div class="logo-area">
+      <img src="gestschooltchad.png" class="logo-image" alt="logo">
+      <span class="logo-text">GestSchool Tchad</span>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="download.html">Téléchargement</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle">☰</div>
+
   </div>
 </header>
 
-<!-- Hero Section -->
+<!-- ======================================================
+     HERO SECTION
+====================================================== -->
 <section class="hero" data-aos="fade-up">
-  <div class="hero-text">
-    <h1>GestSchool Tchad : La solution complète pour votre établissement</h1>
-    <p>Gérez vos élèves, enseignants, notes, bulletins et statistiques facilement avec notre logiciel moderne et sécurisé. Tout-en-un pour les écoles tchadiennes.</p>
-    <a href="download.html" class="cta-btn" data-aos="fade-right" data-aos-delay="200">Télécharger maintenant</a>
-  </div>
-  <div class="hero-image" data-aos="fade-left">
-    <img src="gestschooltchad.png" alt="Logiciel GestSchool Tchad">
+  <h1>La meilleure solution de gestion scolaire au Tchad</h1>
+  <p>Une application moderne pour gérer les élèves, enseignants, notes, bulletins, cartes scolaires et statistiques — développée pour répondre aux besoins réels des établissements tchadiens.</p>
+
+  <div class="hero-buttons">
+    <a href="download.html" class="btn-primary">Télécharger</a>
+    <a href="about.html" class="btn-secondary">En savoir plus</a>
   </div>
 </section>
 
-<!-- Fonctionnalités -->
-<section class="features" id="features">
-  <h2 data-aos="fade-up">Toutes les fonctionnalités de GestSchool Tchad</h2>
-  <div class="feature-cards">
+<!-- ======================================================
+     FEATURES SECTION
+====================================================== -->
+<section class="features">
+  <h2 class="section-title" data-aos="fade-up">Fonctionnalités principales</h2>
+
+  <div class="feature-grid">
 
     <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-      <h3>Gestion des élèves</h3>
-      <p>Inscription, édition, génération de cartes scolaires avec informations complètes.</p>
+      <h3>📚 Gestion des élèves</h3>
+      <p>Inscription, modification, recherches rapides, listes automatiques et cartes scolaires.</p>
     </div>
 
     <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-      <h3>Gestion des enseignants</h3>
-      <p>Suivi complet du personnel : enregistrement, mise à jour et historique.</p>
+      <h3>👨‍🏫 Gestion des enseignants</h3>
+      <p>Fiches complètes, informations administratives et suivi du personnel.</p>
     </div>
 
     <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-      <h3>Gestion des notes et bulletins</h3>
-      <p>Calcul automatique des moyennes annuelles et génération de bulletins PDF.</p>
+      <h3>📝 Gestion des notes</h3>
+      <p>Entrée des notes, calcul automatique, moyennes, classements et bulletins.</p>
     </div>
 
     <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-      <h3>Gestion des classes et sections</h3>
-      <p>Création de classes, sections et suivi précis de l’avancement des élèves.</p>
+      <h3>📊 Statistiques</h3>
+      <p>Génération automatique de graphiques et rapports pour la direction.</p>
     </div>
 
     <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-      <h3>Statistiques et rapports</h3>
-      <p>Graphiques et tableaux détaillés pour analyser les performances de l’école.</p>
+      <h3>🔐 Sécurité des données</h3>
+      <p>Base de données fiable, sauvegarde, exportation et restauration.</p>
     </div>
 
     <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-      <h3>Sauvegarde sécurisée</h3>
-      <p>Base de données fiable, portable et protégée pour éviter toute perte d’information.</p>
-    </div>
-
-    <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
-      <h3>Export et impression</h3>
-      <p>Export PDF, impressions de bulletins, listes et statistiques directement depuis le logiciel.</p>
+      <h3>🇹🇩 Adapté au Tchad</h3>
+      <p>Développé selon les réalités locales, par un ingénieur tchadien.</p>
     </div>
 
   </div>
 </section>
 
-<!-- Avantages -->
-<section class="advantages" data-aos="fade-up">
-  <h2>Pourquoi choisir GestSchool Tchad ?</h2>
-  <div class="adv-cards">
-    <div class="adv-card" data-aos="fade-right" data-aos-delay="100">
-      <h3>🇹🇩 Conçu pour le Tchad</h3>
-      <p>Logiciel adapté aux besoins spécifiques des écoles tchadiennes.</p>
+<!-- ======================================================
+     PRESENTATION DEVELOPPEUR
+====================================================== -->
+<section class="developer">
+  <div class="dev-container" data-aos="fade-up">
+
+    <img src="gestschooltchad.png" alt="Développeur" class="dev-photo">
+
+    <div class="dev-text">
+      <h2>Développé par DAIBA SAHOULBA</h2>
+      <p>
+      Jeune ingénieur passionné par la numérisation de l’éducation nationale tchadienne.
+      L’idée de GestSchool Tchad est née d’un constat : les établissements manquent d’outils modernes pour gérer efficacement les tâches administratives.
+      </p>
+
+      <p>
+      J’ai donc développé une solution complète, sécurisée et simple d’utilisation, adaptée à toutes les écoles secondaires du pays.
+      </p>
     </div>
-    <div class="adv-card" data-aos="fade-right" data-aos-delay="200">
-      <h3>💻 Tout-en-un</h3>
-      <p>Toutes les fonctionnalités de gestion scolaire dans un seul logiciel.</p>
-    </div>
-    <div class="adv-card" data-aos="fade-right" data-aos-delay="300">
-      <h3>⚡ Rapide et simple</h3>
-      <p>Interface intuitive et traitement instantané pour gagner du temps.</p>
-    </div>
-    <div class="adv-card" data-aos="fade-right" data-aos-delay="400">
-      <h3>📊 Décisions facilitées</h3>
-      <p>Statistiques et rapports détaillés pour une meilleure gestion de l’école.</p>
-    </div>
+
   </div>
 </section>
 
-<!-- Screenshots / Images -->
-<section class="screenshots" data-aos="fade-up">
-  <h2>Découvrez l’interface du logiciel</h2>
-  <div class="screenshot-slider">
-    <div><img src="screenshot1.png" alt="Capture 1"></div>
-    <div><img src="screenshot2.png" alt="Capture 2"></div>
-    <div><img src="screenshot3.png" alt="Capture 3"></div>
-  </div>
-</section>
-
-<!-- Témoignages -->
-<section class="testimonials" data-aos="fade-up">
-  <h2>Ce que disent nos utilisateurs</h2>
-  <div class="testimonial-slider">
-    <div>
-      <p>"GestSchool Tchad a révolutionné la gestion de notre établissement. Simple et rapide !"</p>
-      <span>- Directeur lycée XYZ</span>
-    </div>
-    <div>
-      <p>"Le logiciel est complet, fiable et adapté à notre contexte tchadien."</p>
-      <span>- Enseignant lycée ABC</span>
-    </div>
-    <div>
-      <p>"Grâce à GestSchool Tchad, la génération des bulletins et cartes scolaires est devenue un jeu d’enfant."</p>
-      <span>- Administrateur école DEF</span>
-    </div>
-  </div>
-</section>
-
-<!-- Call to Action -->
-<section class="cta-final" data-aos="fade-up">
-  <h2>Prêt à moderniser votre établissement ?</h2>
-  <a href="download.html" class="cta-btn">Télécharger GestSchool Tchad</a>
-</section>
-
-<!-- Footer -->
+<!-- ======================================================
+     FOOTER
+====================================================== -->
 <footer>
   <div class="footer-content">
-    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
-    <p>© 2025 GestSchool Tchad — Développé au Tchad</p>
+    <img src="gestschooltchad.png" class="footer-logo">
+    <p>© 2025 GestSchool Tchad — Développé au Tchad par DAIBA SAHOULBA</p>
   </div>
 </footer>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- AOS JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-  AOS.init({ duration: 1000, once: true });
+AOS.init({ duration: 1000, once: true });
 
-  // Slider screenshots
-  $('.screenshot-slider').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    autoplaySpeed: 3000
-  });
-
-  // Slider témoignages
-  $('.testimonial-slider').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    autoplaySpeed: 4000
-  });
-
-  // Menu hamburger mobile
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.querySelector('.nav');
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-    hamburger.classList.toggle('toggle');
-  });
+document.querySelector('.menu-toggle').onclick = function() {
+  document.querySelector('.nav-menu').classList.toggle('active');
+}
 </script>
 
 </body>
-</html> voici ca on fait normalement 
+</html>
