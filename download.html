@@ -1,213 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Téléchargement - GestSchool Tchad</title>
+<meta name="description" content="Téléchargement de GestSchool Tchad — application pour établissements secondaires (Windows).">
 <link rel="stylesheet" href="style.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
-<style>
-/* -------- STYLE SPÉCIFIQUE À LA PAGE -------- */
-
-.section-download, 
-.section-form {
-    max-width: 950px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 12px;
-    background: #eaf4ff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    text-align: center;
-}
-
-.section-download h2,
-.section-form h2 {
-    font-size: 32px;
-    color: #034f84;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.section-download p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 25px;
-}
-
-.btn-download {
-    display: inline-block;
-    padding: 15px 35px;
-    background-color: #0077cc;
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-download:hover {
-    background-color: #005fa3;
-    transform: translateY(-3px);
-}
-
-/* ----- FORMULAIRE ----- */
-
-form input, form textarea {
-    width: 90%;
-    margin: 10px auto;
-    padding: 14px;
-    border-radius: 6px;
-    border: 1px solid #bbb;
-    font-size: 16px;
-    display: block;
-}
-
-form button {
-    padding: 14px 35px;
-    background-color: #034f84;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 17px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-form button:hover {
-    background-color: #022f54;
-    transform: translateY(-3px);
-}
-
-#confirmation {
-    color: #009c15;
-    margin-top: 15px;
-    font-weight: bold;
-    display: none;
-}
-
-/* ----- RESPONSIVE ----- */
-@media(max-width: 768px){
-    .section-download,
-    .section-form {
-        width: 92%;
-        padding: 25px;
-    }
-
-    .btn-download {
-        width: 90%;
-    }
-
-    form input, form textarea {
-        width: 100%;
-    }
-}
-</style>
-
 </head>
 <body>
-
-<!-- HEADER GLOBAL -->
 <header class="header">
-  <div class="logo-container">
-    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
-    <span class="logo-text">GestSchool Tchad</span>
-  </div>
-
-  <nav class="nav">
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="download.html" class="active">Téléchargement</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
+  <div class="navbar">
+    <div class="logo-area"><img src="gestschooltchad.png" class="logo-image" alt="logo"><span class="logo-text">GestSchool Tchad</span></div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="download.html" class="active">Téléchargement</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle3">☰</div>
   </div>
 </header>
 
-
-<!-- SECTION TÉLÉCHARGEMENT -->
+<main>
 <section class="section-download" data-aos="fade-up">
-  <h2>Télécharger GestSchool Tchad</h2>
-
-  <p>
-    Téléchargez la dernière version officielle de <strong>GestSchool Tchad</strong>, 
-    le logiciel professionnel conçu pour moderniser la gestion des établissements secondaires au Tchad.
-  </p>
-
-  <a href="GestSchoolTchad_setup.exe" class="btn-download" download>
-    ⬇ Télécharger l’application Windows
-  </a>
+  <h1>Télécharger GestSchool Tchad</h1>
+  <p>Téléchargez la dernière version testée et stable pour Windows.</p>
+  <a href="GestSchoolTchad_setup.exe" class="btn-primary large" download>⬇ Télécharger (Windows)</a>
+  <p class="muted">Sur demande : version portable, base DuckDB vierge, documentation PDF.</p>
 </section>
 
-
-<!-- SECTION DEMANDE D'ACCÈS / SUPPORT -->
 <section class="section-form" data-aos="fade-up">
-  <h2>Demander de l'assistance ou un accès</h2>
-  <p>Remplissez le formulaire ci-dessous et vous serez contacté rapidement.</p>
-
+  <h2>Demander une installation ou une formation</h2>
+  <p>Remplissez le formulaire et nous vous contacterons pour assistance.</p>
   <form id="demandeForm" action="https://formspree.io/f/TON_CODE_FORM" method="POST">
     <input type="text" name="nom" placeholder="Nom complet" required>
     <input type="text" name="contact" placeholder="Email ou WhatsApp" required>
-    <textarea name="message" placeholder="Message, école, besoin..." rows="4"></textarea>
-    <button type="submit">Envoyer la demande</button>
+    <textarea name="message" placeholder="École, besoin, disponibilités..." rows="4"></textarea>
+    <button class="btn-primary" type="submit">Envoyer</button>
   </form>
-
-  <p id="confirmation">Merci ! Votre demande a été envoyée avec succès.</p>
+  <p id="confirmation" class="muted" style="display:none;color:green;margin-top:10px;">Merci, demande reçue.</p>
 </section>
+</main>
 
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
-    <p>© 2025 GestSchool Tchad — Développé au Tchad</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="gestschooltchad.png" alt="logo" class="footer-logo">
+    <p>© 2025 GestSchool Tchad</p>
   </div>
 </footer>
 
-
-<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-AOS.init({ duration: 1000, once: true });
-
-// Formspree
-const form = document.getElementById('demandeForm');
-const confirmation = document.getElementById('confirmation');
-
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-
-    fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-        if(response.ok){
-            confirmation.style.display = 'block';
-            form.reset();
-        } else {
-            alert("Erreur lors de l'envoi. Réessayez.");
-        }
-    })
-    .catch(error => {
-        alert("Une erreur est survenue.");
-    });
-});
-
-// Menu mobile
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('.nav');
-
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-    hamburger.classList.toggle('toggle');
-});
-</script>
-
+<script src="script.js"></script>
+<script> AOS.init({duration:900, once:true}); </script>
 </body>
 </html>
