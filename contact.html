@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact - GestSchool Tchad</title>
+<meta name="description" content="Contactez GestSchool Tchad — support, démonstration, installation et partenariat.">
 <link rel="stylesheet" href="style.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-
 <header class="header">
-  <div class="logo-container">
-    <img src="gestschooltchad.png" alt="GestSchool Tchad" class="logo">
-    <span class="logo-text">GestSchool Tchad</span>
+  <div class="navbar">
+    <div class="logo-area"><img src="gestschooltchad.png" class="logo-image" alt="logo"><span class="logo-text">GestSchool Tchad</span></div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="download.html">Téléchargement</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle4">☰</div>
   </div>
-  <nav class="nav">
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="download.html">Téléchargement</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
 </header>
 
-<section class="hero" data-aos="fade-up">
+<main>
+<section class="contact-hero" data-aos="fade-up">
   <h1>Contactez-nous</h1>
-  <p>Pour tout support ou question, contactez-nous via WhatsApp ou email.</p>
+  <p>Pour démonstration, assistance, partenariat ou toute question — contactez directement le développeur.</p>
 </section>
 
-<section class="contacts" data-aos="fade-up">
-  <div class="feature-cards">
-    <div class="feature-card" data-aos="fade-right" data-aos-delay="100">
-      <h3>WhatsApp Direct</h3>
-      <a href="https://wa.me/23568860318" class="contact-btn">Écrire sur WhatsApp</a>
+<section class="contact-cards" data-aos="fade-up">
+  <div class="grid-3">
+    <div class="card">
+      <h3>WhatsApp</h3>
+      <p><a href="https://wa.me/23568860318" target="_blank" rel="noopener">Envoyer un message</a></p>
     </div>
-    <div class="feature-card" data-aos="fade-right" data-aos-delay="200">
+    <div class="card">
       <h3>Email</h3>
-      <a href="mailto:daibasahoulba@gmail.com" class="contact-btn">Envoyer un Email</a>
+      <p><a href="daibasahoulba@gmail.com">contact@gestschooltchad.com</a></p>
     </div>
-    <div class="feature-card" data-aos="fade-right" data-aos-delay="300">
-      <h3>Envoyer un message</h3>
-      <form>
-        <input type="text" placeholder="Votre nom" required>
-        <input type="email" placeholder="Votre email" required>
-        <textarea placeholder="Votre message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <div class="card">
+      <h3>Téléphone</h3>
+      <p>+235 68 86 03 18 (remplace par ton numéro)</p>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-content">
-    <img src="gestschooltchad.png" alt="GestSchool Tchad logo" class="footer-logo">
-    <p>© 2025 GestSchool Tchad — Contact officiel</p>
+<section class="contact-form" data-aos="fade-up">
+  <h2>Envoyer un message</h2>
+  <form action="https://formspree.io/f/TON_CODE_FORM" method="POST" id="contactForm">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre e-mail" required>
+    <textarea name="message" placeholder="Votre message" rows="5"></textarea>
+    <button class="btn-primary" type="submit">Envoyer</button>
+  </form>
+  <p id="contactConfirm" style="display:none;color:green;margin-top:10px;">Message envoyé, merci !</p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="gestschooltchad.png" alt="logo" class="footer-logo">
+    <p>© 2025 GestSchool Tchad</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-</script>
+<script src="script.js"></script>
+<script> AOS.init({duration:900, once:true}); </script>
 </body>
 </html>
